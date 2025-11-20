@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,b,c;
+    cout<<"enter first value : ";
+    cin>>a;
+    cout<<"enter second value : ";
+    cin>>b;
+    cout<<"enter third value : ";
+    cin>>c;
+    int *ptrA=&a;
+    int *ptrB=&b;
+    int *ptrC=&c;
+    int max=0;
+    if (*ptrA>*ptrB && *ptrA>*ptrC ) {
+        max=*ptrA;
+    }
+    else if (*ptrA<*ptrB && *ptrB>*ptrC )
+        max=*ptrB;
+    else {
+        max=*ptrC;
+    }
+
+    cout<<"max is: "<<max<<endl;
+
+
+
+    return 0;
+}
